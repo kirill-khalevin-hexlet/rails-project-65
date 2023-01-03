@@ -16,15 +16,17 @@ on:
       - '**'
 
 jobs:
-  build:
+  rubocop:
+    name: runner / rubocop
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - name: Hexlet project check
-        uses: hexlet/project-action@release
+      - name: Check out code
+        uses: actions/checkout@v1
+      - uses: ruby/setup-ruby@v1
         with:
-          hexlet-id: ${{ secrets.HEXLET_ID }}
-      - name: Run rubocop
-        run: |
-          gem install bundler
-          bundle exec rubocop
+          ruby-version: 3.1.2
+      - name: rubocop
+        uses: reviewdog/action-rubocop@v2
+        with:
+          rubocop_version: gemfile
+          rubocop_extensions: rubocop-rails:gemfile
