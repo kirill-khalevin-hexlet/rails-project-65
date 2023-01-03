@@ -26,4 +26,5 @@ jobs:
           hexlet-id: ${{ secrets.HEXLET_ID }}
       - name: Run rubocop
         run: |
+          gem install bundler
           bundle exec rubocop
