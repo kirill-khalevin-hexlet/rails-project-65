@@ -48,6 +48,8 @@ gem 'bootsnap', require: false
 gem 'dotenv-rails'
 gem 'rollbar'
 
+gem 'rubocop-rails', require: false
+
 # Use Sass to process CSS
 # gem 'sassc-rails'
 
