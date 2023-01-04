@@ -47,6 +47,9 @@ gem 'bootsnap', require: false
 gem 'dotenv-rails'
 gem 'rollbar'
 
+gem 'omniauth-github'
+gem 'omniauth-rails_csrf_protection'
+
 gem 'rubocop-rails', require: false
 
 # Use Sass to process CSS
